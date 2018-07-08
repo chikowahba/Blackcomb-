@@ -19,7 +19,7 @@
               <td>{{contact.lastName}}</td>
               <td>{{contact.email}}</td>
               <td>{{contact.number}}</td>
-              <td><button @click="viewUser(contact)">view contact</button></td>
+              <td><button @click="viewUser(contact,index)">view contact</button></td>
               <td><button @click="editUser(contact, index)">edit contact</button></td>
               <td><button @click="deleteUser(contact._id)">delete contact</button></td>
             </tr>
@@ -49,6 +49,7 @@
     export default {
         data: function () {
             return {
+                selectedViewIndex : null,
                 selectedIndex : null,
                 selectedEditContact : null,
                 selectedViewContact : null,
@@ -63,11 +64,14 @@
             };
         },
         methods: {
-            viewUser(obj) {
+            viewUser(obj,index) {
+              this.selectedViewIndex = index;
               this.selectedViewContact  = obj;
             },
             change(event){
+            if (this.selectedViewIndex ==this.selectedIndex) {
               this.selectedViewContact = event;
+            }
               axios
                 .get('/contact')
                 .then(response => {

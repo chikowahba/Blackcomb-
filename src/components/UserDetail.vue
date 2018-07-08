@@ -7,7 +7,7 @@
         <p>number: {{ contact.number }}</p>
     </div>
     <div class="component" v-else>
-      <h3>No user selected</h3> 
+      <h3>No contact selected</h3> 
     </div>
 </template>
 
