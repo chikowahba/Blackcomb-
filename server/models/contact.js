@@ -1,4 +1,4 @@
-var mongoose = require ('mongoose');
+var {mongoose} = require('../db/mongoose');
 
 var Contact = mongoose.model('Contact' , {
   firstName: {
@@ -22,20 +22,5 @@ var Contact = mongoose.model('Contact' , {
     required: true,
   }
 });
-
-// var newTodo =  new Todo ({
-//     text : 'good'
-// });
-
-// newTodo.save().then((doc)=>{
-//     console.log('user saved' , doc);
-// },(e)=> {
-//     console.log(e);
-// })
-// newTodo.save().then((doc)=>{
-//     console.log('good' , doc);
-// },(e)=> {
-//     console.log(e);
-// })
 
 module.exports = {Contact};

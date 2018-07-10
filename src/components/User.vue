@@ -69,7 +69,7 @@
               this.selectedViewContact  = obj;
             },
             change(event){
-            if (this.selectedViewIndex ==this.selectedIndex) {
+            if (this.selectedViewIndex == this.selectedIndex) {
               this.selectedViewContact = event;
             }
               axios

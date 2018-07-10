@@ -1,5 +1,4 @@
-
-var mongoose = require('mongoose');
+var {mongoose} = require('../db/mongoose');
 
 var User = mongoose.model('User', {
   email: {
@@ -10,10 +9,6 @@ var User = mongoose.model('User', {
     type: String,
     required: true,
   }
-  // admin: {
-  //   type: Boolean,
-  //   required: true,
-  // }
 
 });
 

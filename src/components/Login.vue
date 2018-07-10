@@ -24,7 +24,7 @@
       methods: {
         login : function() {
         axios
-          .post('/login',this.user)
+          .post('user/login',this.user)
           .then(response => {
 
             if (response.data.token)
